@@ -10,7 +10,7 @@
 - 2026-10-28: TES-11 approved copy committed (`63e0d87`), pushed, and **verified live** on GitHub Pages — exact-match money-page H1, $900–$5,000+ honest price ranges, FAQ + FAQPage in sync
 
 ## Live URL
-- **https://frameless-shower-doors-brownsville-chillzana.vercel.app/** (Vercel, production, main branch — migrated 2026-10-28, deploy of commit `83c8ff9`)
+- **https://showerdoorsbrownsville.com/** (Vercel, production, main branch — migrated 2026-10-28, deploy of commit `83c8ff9`)
 - Canonicals, `sitemap.xml`, `robots.txt`, and schema `@id`s all point at the Vercel host
 - GitHub Pages still serves with cross-host canonicals (harmless; search engines yield to the canonical host)
 - Vercel project: `frameless-shower-doors-brownsville`; SSO deployment protection disabled project-wide (it was serving `x-robots-tag: noindex`)
