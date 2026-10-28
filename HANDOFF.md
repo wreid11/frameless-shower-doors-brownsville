@@ -3,10 +3,11 @@
 **Last updated:** 2026-10-28 (**LIVE ON VERCEL** — migrated from GitHub Pages via board-provided Vercel token)
 
 ## Shipped
-- 4 pages live: `/`, `/frameless-shower-doors-brownsville-tx/`, `/get-a-quote/`, `/about/`
+- 4 pages live: `/`, `/frameless-shower-doors-brownsville-tx/`, `/get-a-quote/`, `/about/` — plus `/privacy-policy/` (TES-18, 2026-10-28)
 - Schema: LocalBusiness on all pages, Service + FAQPage on money page (single `@graph`), WebSite on hub
 - `sitemap.xml` + `robots.txt`, mobile-responsive, GBP footer mention
 - Quote form: client-side validation; posts JSON to `LEAD_ENDPOINT` when set; otherwise one-click pre-filled email fallback (nothing silently lost)
+- **Lead pipeline (TES-18, 2026-10-28):** form now posts to `api/lead` (Vercel serverless function). It validates the payload and forwards it to `LEAD_WEBHOOK_URL` (Google Sheet append + board email alert via one webhook). Until the board supplies that URL the function answers 503 and the form shows the email fallback — no silent drops. Footer on every page links to `/privacy-policy/`.
 - 2026-10-28: TES-11 approved copy committed (`63e0d87`), pushed, and **verified live** on GitHub Pages — exact-match money-page H1, $900–$5,000+ honest price ranges, FAQ + FAQPage in sync
 
 ## Live URL
@@ -17,12 +18,12 @@
 - **Deploy note:** pushes to `main` do NOT auto-deploy (Vercel GitHub webhook not installed on the repos) — redeploy via Vercel dashboard "Redeploy" or the API
 
 ## Waiting on decisions
-1. **Lead endpoint:** operator to set the form delivery (Formspree/FormSubmit email, or Vercel function + webhook). 15-minute task; until then submissions use the email fallback.
+1. **Lead endpoint (final step):** `api/lead` is live but forwards nowhere until `LEAD_WEBHOOK_URL` is set as a Vercel env var on this project (board to provide the Google Apps Script webhook URL — one URL covers Sheet append + email alert). Then redeploy once.
 2. **Domain:** buy exact-match domain (~$11/yr, e.g. `framelessshowerdoorsbrownsville.com`) and point it at the site. Then: attach it in Vercel, one-pass canonical/sitemap swap, redeploy.
 3. **Exclusive lead buyer:** sales side — first 3 leads free to lock in a contractor at $150–200/mo (Koerner-validated city per research synthesis).
 4. **GBP claim:** create/claim Google Business Profile for the brand; swap footer link; add listing URL to SITE.md.
 
 ## Next actions (in order)
-1. Wire lead endpoint (operator, 15 min)
+1. Board provides Google Apps Script webhook URL → set `LEAD_WEBHOOK_URL` env var on both Vercel projects → redeploy → end-to-end lead test
 2. Submit sitemap to Google Search Console + Brave on the final domain (agent, day of domain live)
 3. 90 days: first GSC review — quick wins only, per RULES.md pace
