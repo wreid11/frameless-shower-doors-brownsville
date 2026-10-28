@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Get a Free Frameless Shower Door Quote | Brownsville, TX</title>
-<meta name="description" content="Request a free frameless shower door quote in Brownsville, TX and Cameron County. Free in-home measure, written pricing, vetted local glass pros. No obligation.">
+<title>Get a Free Frameless Shower Door Quote | Brownsville TX</title>
+<meta name="description" content="Free frameless shower door quotes for Brownsville TX and the Rio Grande Valley. Two minutes to request, response within one business day, zero obligation.">
 <link rel="canonical" href="https://wreid11.github.io/frameless-shower-doors-brownsville/get-a-quote/">
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -24,31 +24,37 @@
 <section>
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="../">Home</a> › <span>Get a Quote</span></nav>
-    <h1>Get Your Free Frameless Shower Quote</h1>
-    <p style="max-width:60ch">Tell us about your bathroom anywhere in Brownsville or Cameron County. We match you with vetted local glass pros for a free in-home measure and a written quote — no cost, no obligation. Most people hear back within one business day.</p>
+    <h1>Get Your Free Frameless Shower Door Quote</h1>
+    <p style="max-width:60ch">Tell us about your shower and a vetted Brownsville glass installer will get you a real price on frameless glass cut to fit. Free, fast, and no obligation — most requests get a response within one business day.</p>
     <form class="quote" id="quoteForm" method="post" action="#" novalidate>
       <div class="form-grid">
-        <div class="full"><label for="name">Your name *</label><input id="name" name="name" type="text" autocomplete="name" required placeholder="e.g. Carlos Peña"></div>
-        <div><label for="phone">Phone *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="(956) 555-0123"></div>
-        <div><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+        <div class="full"><label for="name">Your name *</label><input id="name" name="name" type="text" autocomplete="name" required placeholder="e.g. Maria Gonzalez"></div>
+        <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(956) 555-0123"></div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div>
         <div class="full"><label for="location">City / ZIP *</label><input id="location" name="location" type="text" required placeholder="Brownsville, TX 78520"></div>
         <div class="full">
-          <label for="service">What do you need? *</label>
-          <select id="service" name="service" required>
+          <label for="project">Project type *</label>
+          <select id="project" name="project" required>
             <option value="">Choose one…</option>
-            <option>New frameless shower door</option>
-            <option>Full frameless enclosure</option>
-            <option>Replace existing framed door</option>
-            <option>Tub-to-shower conversion</option>
-            <option>Fixed splash panel</option>
-            <option>Not sure — need advice</option>
+            <option>Replace existing door</option>
+            <option>New remodel</option>
+            <option>New construction</option>
           </select>
         </div>
-        <div class="full"><label for="details">Project details</label><textarea id="details" name="details" rows="4" placeholder="Rough opening size if you know it, tile status (new/existing), hardware finish you like, target timeline…"></textarea></div>
+        <div class="full">
+          <label for="showertype">Shower type *</label>
+          <select id="showertype" name="showertype" required>
+            <option value="">Choose one…</option>
+            <option>Alcove</option>
+            <option>Corner</option>
+            <option>Custom enclosure</option>
+          </select>
+        </div>
+        <div class="full"><label for="dimensions">Rough dimensions (if known)</label><input id="dimensions" name="dimensions" type="text" placeholder="e.g. 60&quot; wide opening, 34&quot; return panel"></div>
         <div class="full"><label for="photo">Photo URL (optional)</label><input id="photo" name="photo" type="url" placeholder="Link to a photo of the shower (Google Photos, Dropbox…)"></div>
         <div class="full">
           <button class="btn big" type="submit">Send My Free Quote Request</button>
-          <p class="consent">By submitting, you agree to be contacted about your quote request by Frameless Shower Doors Brownsville and matched local contractors. We never sell your information to anyone else. No spam, ever.</p>
+          <p class="consent">Your information goes to one vetted local installer — never sold to a dozen companies. Free means free: the quote costs you nothing and you're never required to book.</p>
           <p class="form-status" id="formStatus" role="status"></p>
           <p class="mailto-fallback" id="mailtoFallback"></p>
         </div>
@@ -58,13 +64,13 @@
 </section>
 <section class="soft">
   <div class="wrap">
-    <h2>What Happens After You Hit Send</h2>
+    <h2>What Happens Next</h2>
     <div class="steps">
-      <div class="step"><h3>We review your request</h3><p>A real person checks the details and the service area — Brownsville and greater Cameron County.</p></div>
-      <div class="step"><h3>Matched pros reach out</h3><p>Vetted glass installers contact you to set up the free in-home measure.</p></div>
-      <div class="step"><h3>You get written pricing</h3><p>Exact quotes before anyone orders glass. Hire whoever you prefer — or no one.</p></div>
+      <div class="step"><h3>We route your job</h3><p>To a vetted local installer — usually the same day.</p></div>
+      <div class="step"><h3>You get a free quote</h3><p>Typically within one business day.</p></div>
+      <div class="step"><h3>You decide</h3><p>No follow-up harassment, no reselling your info, no obligation.</p></div>
     </div>
-    <p style="margin-top:1.4rem">Want the full picture first? Read the <a href="../frameless-shower-doors-brownsville-tx/">Frameless Shower Doors Brownsville TX</a> guide, or learn <a href="../about/">who we are</a>.</p>
+    <p style="margin-top:1.4rem">Want the full picture first? Read <a href="../frameless-shower-doors-brownsville-tx/">how frameless shower doors work in Brownsville</a>, or learn <a href="../about/">who we are</a>.</p>
   </div>
 </section>
 </main>
@@ -95,20 +101,25 @@
   var fallback = document.getElementById("mailtoFallback");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    if (!form.checkValidity()) {
-      status.className = "form-status err";
-      status.textContent = "Please fill in the required fields marked with *.";
-      return;
-    }
     var data = {};
     new FormData(form).forEach(function (v, k) { data[k] = v; });
+    if (!data.name || !data.location || !data.project || !data.showertype || (!data.phone && !data.email)) {
+      status.className = "form-status err";
+      status.textContent = "Please fill in the required fields — name, city/ZIP, project type, shower type, and a phone or email.";
+      return;
+    }
     data.site = "brownsville-frameless-shower-doors";
     data.submittedAt = new Date().toISOString();
     var body = encodeURIComponent(
       "Frameless shower door quote request (Brownsville)\n\n" +
-      "Name: " + data.name + "\nPhone: " + data.phone + "\nEmail: " + data.email +
-      "\nLocation: " + data.location + "\nService: " + data.service +
-      "\nPhoto: " + (data.photo || "n/a") + "\n\nDetails:\n" + (data.details || "n/a")
+      "Name: " + data.name +
+      "\nPhone: " + (data.phone || "n/a") +
+      "\nEmail: " + (data.email || "n/a") +
+      "\nLocation: " + data.location +
+      "\nProject type: " + data.project +
+      "\nShower type: " + data.showertype +
+      "\nDimensions: " + (data.dimensions || "n/a") +
+      "\nPhoto: " + (data.photo || "n/a")
     );
     if (LEAD_ENDPOINT) {
       fetch(LEAD_ENDPOINT, {
@@ -118,7 +129,7 @@
       }).then(function (r) {
         if (!r.ok) throw new Error("bad status");
         status.className = "form-status ok";
-        status.textContent = "Got it — your request is in. A local pro will reach out shortly.";
+        status.textContent = "Got it — your request is in. A local installer will reach out shortly.";
         form.reset();
       }).catch(function () {
         showFallback(body);
