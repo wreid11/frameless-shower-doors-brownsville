@@ -12,4 +12,4 @@
 **Authority:** New domain (GH Pages URL until custom domain). DR ~0, referring domains ~0. Strategy: exact-match long tail; free on-topic links; Brave sitemap submit on launch day; parasite posts (Model 5) later if approved.
 **Never:** invent reviews or project galleries; publish a fake street address or phone; claim to be an installer (we are a referral service); quote prices without the in-home-measure caveat; make safety claims beyond tempered-glass standards.
 
-**Canonical URL:** `https://wreid11.github.io/frameless-shower-doors-brownsville/` (swap when custom domain / Vercel domain is live — see HANDOFF).
+**Canonical URL:** `https://frameless-shower-doors-brownsville-chillzana.vercel.app/` (swap when custom domain / Vercel domain is live — see HANDOFF).

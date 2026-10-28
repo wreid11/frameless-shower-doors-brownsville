@@ -10,7 +10,7 @@
 - 2026-10-28: TES-11 approved copy committed (`63e0d87`), pushed, and **verified live** on GitHub Pages — exact-match money-page H1, $900–$5,000+ honest price ranges, FAQ + FAQPage in sync
 
 ## Live URL
-- https://wreid11.github.io/frameless-shower-doors-brownsville/ (GitHub Pages, main branch)
+- https://frameless-shower-doors-brownsville-chillzana.vercel.app/ (GitHub Pages, main branch)
 - Vercel migration: board chose **Composio** as the connection provider; Composio channel is connected, but **Vercel app authorization inside Composio is not yet verified** — migration starts once that gate clears
 
 ## Waiting on decisions

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wreid11.github.io/frameless-shower-doors-brownsville/sitemap.xml
+Sitemap: https://frameless-shower-doors-brownsville-chillzana.vercel.app/sitemap.xml
