@@ -56,6 +56,7 @@ module.exports = async (req, res) => {
   const showerType = str(lead.showertype);
   const dimensions = str(lead.dimensions);
   const photo = str(lead.photo);
+  const spanish = str(lead.lang) === "es";
 
   if (!name || !location || !service || !showerType || (!phone && !email)) {
     return respond(res, 400, {
@@ -77,7 +78,7 @@ module.exports = async (req, res) => {
     site: SITE,
     status: "New",
     location: location,
-    details: [showerType, dimensions].filter(Boolean).join(" — ") || "n/a",
+    details: [showerType, dimensions, spanish ? "Idioma: español" : ""].filter(Boolean).join(" — ") || "n/a",
     photo: photo || "n/a",
   };
 

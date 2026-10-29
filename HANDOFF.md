@@ -3,6 +3,7 @@
 **Last updated:** 2026-10-28 (**LIVE ON VERCEL** — migrated from GitHub Pages via board-provided Vercel token)
 
 ## Shipped
+- 2026-10-28 (TES-24): Spanish page `/puertas-de-ducha-brownsville/` built (pending deploy verification — see LEDGER). Needs real Spanish testimonials + real job photos when available.
 - 4 pages live: `/`, `/frameless-shower-doors-brownsville-tx/`, `/get-a-quote/`, `/about/` — plus `/privacy-policy/` (TES-18, 2026-10-28)
 - Schema: LocalBusiness on all pages, Service + FAQPage on money page (single `@graph`), WebSite on hub
 - `sitemap.xml` + `robots.txt`, mobile-responsive, GBP footer mention
