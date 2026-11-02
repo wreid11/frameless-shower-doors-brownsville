@@ -12,7 +12,7 @@ How every page on this site is built. Do not deviate without updating this file.
 - One new page a day at most — new site: closer to one a week. Never bombard.
 - Never edit a page changed in the last 90 days. Log every change in LEDGER.md with the date.
 - Check a page doesn't already exist before creating one.
-- Forms must never leak data: lead endpoint env/config only; no third-party scripts; no tracking pixels until the board approves.
+- Forms must never leak data: lead endpoint env/config only. Third-party scripts: Google Analytics 4 only (board-approved via TES-36, 2026-11-02), loaded from `analytics.js` with the measurement ID in exactly that one file; no ad scripts, no tracking pixels beyond it. Lead events (`generate_lead`) fire on quote submit, never with form contents.
 - Footer keeps the Google Business Profile mention. Swap the link target the day the GBP listing is claimed.
 - Mobile-responsive is non-negotiable: every new section must read cleanly at 375px.
 - Canonical URLs: relative internal links, absolute canonicals from the single BASE_URL documented in SITE.md.

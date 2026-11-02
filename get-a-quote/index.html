@@ -7,6 +7,7 @@
 <meta name="description" content="Free frameless shower door quotes for Brownsville TX and the Rio Grande Valley. Two minutes to request, response within one business day, zero obligation.">
 <link rel="canonical" href="https://showerdoorsbrownsville.com/get-a-quote/">
 <link rel="stylesheet" href="../styles.css">
+<script src="/analytics.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -129,6 +130,7 @@
         body: JSON.stringify(data)
       }).then(function (r) {
         if (!r.ok) throw new Error("bad status");
+        if (window.siteTrackLead) window.siteTrackLead(data.project, "en");
         status.className = "form-status ok";
         status.textContent = "Got it — your request is in. A local installer will reach out shortly.";
         form.reset();
@@ -149,6 +151,9 @@
     fallback.innerHTML = "";
     fallback.className = "mailto-fallback show";
     fallback.appendChild(a);
+    a.addEventListener("click", function () {
+      if (window.siteTrackLead) window.siteTrackLead(form.elements.project.value, "en");
+    });
   }
 })();
 </script>

@@ -9,6 +9,7 @@
 - `sitemap.xml` + `robots.txt`, mobile-responsive, GBP footer mention
 - Quote form: client-side validation; posts JSON to `LEAD_ENDPOINT` when set; otherwise one-click pre-filled email fallback (nothing silently lost)
 - **Lead pipeline (TES-18, 2026-10-28):** form now posts to `api/lead` (Vercel serverless function). It validates the payload and forwards it to `LEAD_WEBHOOK_URL` (Google Sheet append + board email alert via one webhook). Until the board supplies that URL the function answers 503 and the form shows the email fallback — no silent drops. Footer on every page links to `/privacy-policy/`.
+- **Analytics (TES-36, 2026-11-02):** `analytics.js` on every page — GA4 loader + `generate_lead` conversion event on quote submit (en + Spanish page, including mailto-fallback click). Inert until the board's GA4 measurement ID replaces the placeholder in `analytics.js` (fails a `G-…` regex check → loads nothing). Privacy policy updated to disclose GA4 truthfully. Board step-by-step for GA4/GSC is on Paperclip issue TES-36.
 - 2026-10-28: TES-11 approved copy committed (`63e0d87`), pushed, and **verified live** on GitHub Pages — exact-match money-page H1, $900–$5,000+ honest price ranges, FAQ + FAQPage in sync
 
 ## Live URL
@@ -19,10 +20,11 @@
 - **Deploy note:** pushes to `main` do NOT auto-deploy (Vercel GitHub webhook not installed on the repos) — redeploy via Vercel dashboard "Redeploy" or the API
 
 ## Waiting on decisions
-1. **Lead endpoint (final step):** `api/lead` is live but forwards nowhere until `LEAD_WEBHOOK_URL` is set as a Vercel env var on this project (board to provide the Google Apps Script webhook URL — one URL covers Sheet append + email alert). Then redeploy once.
-2. **Domain:** buy exact-match domain (~$11/yr, e.g. `framelessshowerdoorsbrownsville.com`) and point it at the site. Then: attach it in Vercel, one-pass canonical/sitemap swap, redeploy.
-3. **Exclusive lead buyer:** sales side — first 3 leads free to lock in a contractor at $150–200/mo (Koerner-validated city per research synthesis).
-4. **GBP claim:** create/claim Google Business Profile for the brand; swap footer link; add listing URL to SITE.md.
+1. **Analytics IDs (TES-36):** board creates the GA4 property (board-controlled Google account) → send the `G-…` measurement ID → we set it in `analytics.js`, redeploy, verify. Same account creates GSC properties → send the two verification values (TXT record token is easiest) → we add DNS TXT via Cloudflare, then submit `/sitemap.xml` in GSC. Full step-by-step on the issue.
+2. **Lead endpoint (final step):** `api/lead` is live but forwards nowhere until `LEAD_WEBHOOK_URL` is set as a Vercel env var on this project (board to provide the Google Apps Script webhook URL — one URL covers Sheet append + email alert). Then redeploy once.
+3. **Domain:** buy exact-match domain (~$11/yr, e.g. `framelessshowerdoorsbrownsville.com`) and point it at the site. Then: attach it in Vercel, one-pass canonical/sitemap swap, redeploy.
+4. **Exclusive lead buyer:** sales side — first 3 leads free to lock in a contractor at $150–200/mo (Koerner-validated city per research synthesis).
+5. **GBP claim:** create/claim Google Business Profile for the brand; swap footer link; add listing URL to SITE.md.
 
 ## Next actions (in order)
 1. Board provides Google Apps Script webhook URL → set `LEAD_WEBHOOK_URL` env var on both Vercel projects → redeploy → end-to-end lead test
