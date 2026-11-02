@@ -29,3 +29,16 @@
     } catch (e) { /* analytics must never break the form */ }
   };
 })();
+
+// Vercel Web Analytics (TES-31, board-approved Decision 2). Cookieless page
+// views measured by Vercel itself — no ID, no cookies. The
+// /_vercel/insights/script.js route only activates once Web Analytics is
+// enabled on the project AND a deployment follows; until then the request
+// 404s silently and nothing is collected.
+(function () {
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  var s = document.createElement("script");
+  s.defer = true;
+  s.src = "/_vercel/insights/script.js";
+  document.head.appendChild(s);
+})();
