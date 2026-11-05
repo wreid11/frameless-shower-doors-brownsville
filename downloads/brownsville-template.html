@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Measure-It-Yourself Template + Price-Matcher Sheet</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1a2332;
+    background: white;
+    margin: 0;
+    padding: 40px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 1.8rem; margin-bottom: 0.5rem; color: #0c3a1f; border-bottom: 3px solid #14532d; padding-bottom: 0.5rem; }
+  h2 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #0c3a1f; }
+  .section { margin-bottom: 2rem; page-break-inside: avoid; }
+  .measurement-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1rem 0;
+  }
+  .measurement-box {
+    border: 2px solid #14532d;
+    padding: 1.2rem;
+    border-radius: 8px;
+    background: #f4f6f3;
+  }
+  .measurement-box label { font-weight: 600; display: block; margin-bottom: 0.5rem; }
+  .measurement-box input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #e2e8e0;
+    border-radius: 4px;
+    font-size: 0.95rem;
+  }
+  .measurement-box small { display: block; margin-top: 0.3rem; color: #64748b; font-size: 0.8rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  table th, table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #e2e8e0;
+  }
+  table th { background: #0c3a1f; color: white; font-weight: 600; }
+  table tr:nth-child(even) { background: #f4f6f3; }
+  .notes-box {
+    padding: 1rem;
+    background: #fff3cd;
+    border-left: 4px solid #f59e0b;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+  }
+  .notes-box strong { color: #92400e; }
+  .footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e2e8e0; font-size: 0.9rem; color: #64748b; }
+  @media print {
+    body { padding: 20px; }
+    .section { page-break-inside: avoid; }
+    table { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div>
+  <h1>Measure-It-Yourself Template + Price-Matcher Sheet</h1>
+  <p><strong>Brownsville Shower Doors</strong> — Free measurement guide & quote comparison tool</p>
+
+  <div class="notes-box">
+    <strong>📏 Pro Tip:</strong> Measure twice. Use a metal measuring tape (not fabric). Measure from the finished edge of the wall to the finished edge, not from studs. Height: measure floor to underside of frame header.
+  </div>
+
+  <div class="section">
+    <h2>Step 1: Measure Your Shower Opening</h2>
+    <p>Fill in your measurements below. If you're installing over an existing enclosure, measure the old frame's perimeter.</p>
+
+    <div class="measurement-grid">
+      <div class="measurement-box">
+        <label for="width">Width (Left to Right)</label>
+        <input type="text" id="width" placeholder="e.g., 48 in" />
+        <small>Inches (or cm if you prefer)</small>
+      </div>
+      <div class="measurement-box">
+        <label for="height">Height (Floor to Top)</label>
+        <input type="text" id="height" placeholder="e.g., 78 in" />
+        <small>Inches (or cm)</small>
+      </div>
+      <div class="measurement-box">
+        <label for="depth">Depth (Front to Back)</label>
+        <input type="text" id="depth" placeholder="e.g., 36 in" />
+        <small>For corner or alcove enclosures</small>
+      </div>
+      <div class="measurement-box">
+        <label for="angle">Angle (if angled walls)</label>
+        <input type="text" id="angle" placeholder="e.g., 90° (normal)" />
+        <small>Leave blank if walls are square</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Step 2: Enclosure Type</h2>
+    <p>Check the type that matches your project:</p>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Typical Price Range</th>
+      </tr>
+      <tr>
+        <td>Frameless Slider (2 panels)</td>
+        <td>Side-by-side sliding doors, no frame</td>
+        <td>$1,200–$2,000</td>
+      </tr>
+      <tr>
+        <td>Frameless Pivot (2 panels)</td>
+        <td>Hinged doors, frameless glass</td>
+        <td>$1,500–$2,500</td>
+      </tr>
+      <tr>
+        <td>Frameless Neo-Angle (3 panels)</td>
+        <td>Corner enclosure, angled door</td>
+        <td>$1,800–$2,800</td>
+      </tr>
+      <tr>
+        <td>Frameless Bypass (2 sliding)</td>
+        <td>Bypass track system, fully frameless</td>
+        <td>$1,400–$2,200</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Step 3: Quote Comparison Worksheet</h2>
+    <p>Fill this in when contractors provide quotes. Compare apples-to-apples.</p>
+    <table>
+      <tr>
+        <th>Contractor Name</th>
+        <th>Total Price</th>
+        <th>Glass Type</th>
+        <th>Installation Included?</th>
+        <th>Warranty</th>
+        <th>Notes</th>
+      </tr>
+      <tr>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="Name" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="$" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="Clear/Frosted" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="Yes/No" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="e.g., 5yr" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="Quick notes" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="Name" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="$" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="Clear/Frosted" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="Yes/No" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="e.g., 5yr" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="Quick notes" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="Name" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="$" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="Clear/Frosted" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="Yes/No" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="e.g., 5yr" /></td>
+        <td><input type="text" style="width: 100%; border: none; padding: 0;" placeholder="Quick notes" /></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Quick Quality Checklist</h2>
+    <p>Ask every contractor about these:</p>
+    <ul>
+      <li><strong>Glass thickness:</strong> Is it 6mm or 8mm? (8mm is more durable)</li>
+      <li><strong>Hardware:</strong> Stainless steel or chrome? Soft-close hinges?</li>
+      <li><strong>Seals:</strong> Do they use quality silicone or caulk?</li>
+      <li><strong>Installation:</strong> Who handles prep and waterproofing?</li>
+      <li><strong>Timeline:</strong> When can they start? How long does it take?</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p><strong>Ready to get real quotes?</strong> <a href="https://frameless-shower-doors-brownsville-chillzana.vercel.app/get-a-quote/">Request free quotes from vetted Brownsville contractors</a>.</p>
+    <p>© 2026 Brownsville Shower Doors</p>
+  </div>
+</div>
+</body>
+</html>
